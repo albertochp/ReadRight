@@ -1,0 +1,118 @@
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  width: 480px; /* Adjust the width as needed */
+  min-height: 240px; /* Adjust the minimum height as needed */
+  height: auto; /* Allows height to expand based on content */
+  overflow: auto; /* Allows scrolling if content exceeds popup size */
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#settings-column {
+  flex-grow: 1;
+}
+
+#header-column {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  max-width: 100px;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+#applyChangesButton {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+  background: white;
+  color: darkorange;
+  cursor: pointer;
+  align-self: center;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+#applyChangesButton:hover {
+  background: darkorange;
+  color: white;
+}
+
+#generateOutlineButton {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid lightgreen; /* Light green border */
+  border-radius: 5px;
+  background: white;
+  color: darkgreen; /* Adjust text color as needed */
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+#generateOutlineButton:hover {
+  background: lightgreen;
+  color: white;
+}
+
+
+#settings > div {
+  margin-bottom: 20px;
+}
+/* Hide the default radio button appearance */
+input[type="radio"] {
+  visibility: hidden; /* Hide the input but allow it to be focusable */
+  position: absolute; /* Take it out of the document flow */
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom radio button style */
+input[type="radio"] + label {
+  display: inline-block;
+  padding: 8px;
+  border: 2px solid navy; /* Navy blue border */
+  border-radius: 4px; /* Rounded corners */
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px; /* Space between each option */
+  color: navy; /* Initial color for text */
+  transition: background-color 0.2s, color 0.2s; /* Smooth transition for colors */
+}
+
+/* Style when the radio button is checked */
+input[type="radio"]:checked + label {
+  background-color: rgb(33, 101, 248); /* Navy blue background */
+  color: white; /* Change text color to white when checked */
+}
+
+/* Style to resemble a checkbox */
+input[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 2px; /* Slightly rounded corners for the inner square */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s; /* Smooth transition for opacity */
+}
+

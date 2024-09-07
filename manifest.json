@@ -1,0 +1,26 @@
+{
+  "name": "ReadRight",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons":{
+    "16": "16logoRR1.png",
+    "48": "48logoRR1.png",
+    "128": "128logoRR1.png"
+  },
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],  
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

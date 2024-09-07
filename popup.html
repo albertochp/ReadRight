@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ReadRight Settings</title>
+    <link rel="stylesheet" href="popupStyles.css">
+    <script src="popup.js" defer></script>
+  </head>
+<body>
+  <div id="container">
+    <div id="settings-column">
+      <div id="line-spacing">
+        <h2>Line-Spacing</h2>
+          <input type="radio" id="spacing1" name="line-spacing" value="1">
+          <label for="spacing1">1</label>
+          <input type="radio" id="spacing1_5" name="line-spacing" value="1.5" checked>
+          <label for="spacing1_5">1.5</label>
+          <input type="radio" id="spacing2" name="line-spacing" value="2">
+          <label for="spacing2">2</label>
+          <!-- Add more spacing options or a way to input custom values if required -->
+      </div>
+      <div id="font">
+        <h2>Font</h2>
+          <input type="radio" id="fontArial" name="font" value="Arial" checked>
+          <label for="fontArial">Arial</label>
+          <input type="radio" id="fontCalibri" name="font" value="Calibri">
+          <label for="fontCalibri">Calibri</label>
+          <input type="radio" id="fontRoboto" name="font" value="Roboto">
+          <label for="fontRoboto">Roboto</label>
+          <!-- Add more font options or a way to input custom fonts if required -->
+      </div>
+      <div id="text-emphasis">
+        <h2>Text Emphasis</h2>
+          <input type="radio" id="emphasisOn" name="text-emphasis" value="on" checked>
+          <label for="emphasisOn">On</label>
+          <input type="radio" id="emphasisOff" name="text-emphasis" value="off">
+          <label for="emphasisOff">Off</label>
+          <!-- Add more emphasis options or a custom input if needed -->
+      </div>
+
+    </div>
+    <div id="header-column">
+      <div id="header">
+        <img src="128logoRR1.png" alt="ReadRight Logo" id="logo" />
+        <h1>ReadRight Settings</h1>
+      </div>
+      <button id="applyChangesButton">Apply Changes</button>
+      <button id="generateOutlineButton">Generate Outline</button>
+    </div>
+  </div>
+
+  <div id="displayArea">
+    <h2 id="outlineHeading" style="visibility:hidden;">Outline loading...</h2>
+  </div>
+
+</body>
+</html>
